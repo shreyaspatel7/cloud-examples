@@ -1,4 +1,4 @@
-## AWS Serverlelss IaS [WIP]
+## AWS Serverlelss IaC [WIP]
 
 ### Introduction
 
