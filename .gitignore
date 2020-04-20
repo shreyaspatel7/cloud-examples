@@ -1,1 +1,4 @@
-this.plan
+
+terraform/serverless/wildride/.terraform
+terraform/serverless/wildride/this.plan
+terraform/serverless/wildride/app/dev/xyz/website/js/config.js

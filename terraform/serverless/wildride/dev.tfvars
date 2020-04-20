@@ -1,3 +1,3 @@
 env     = "dev"
 partner = "xyz"
-app     = "wildhorse"
+app     = "wildrydes"
