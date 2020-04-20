@@ -2,7 +2,7 @@
 
 ### Introduction
 
-In this project we have implemented the terrafrom code foe the serverless web application architecture mentioned on the [AWS site](https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/). This Terraform Framerwork supports deployment for mulitple clients as well as multiple environments(dev, uat, prod..etc) based on the varibles configured in the `dev.tfvars file`. This code will utilize the following AWS resources via terraform:
+In this project we have implemented the terrafrom code for the serverless web application architecture mentioned on the [AWS site](https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/). This Terraform Framerwork supports deployment for mulitple clients as well as multiple environments(dev, uat, prod..etc) based on the varibles configured in the `dev.tfvars file`. This code will utilize the following AWS resources via terraform:
 
 1. S3 storage for static site hosting
 2. AWS Cognito User Pool for the user managment (autherization/authentication)
