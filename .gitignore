@@ -2,3 +2,9 @@
 terraform/serverless/wildride/.terraform
 terraform/serverless/wildride/this.plan
 terraform/serverless/wildride/app/dev/xyz/website/js/config.js
+
+
+
+terraform/serverless/wildrydes/.terraform
+terraform/serverless/wildrydes/this.plan
+terraform/serverless/wildrydes/app/dev/xyz/website/js/config.js
