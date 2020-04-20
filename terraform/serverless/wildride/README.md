@@ -12,7 +12,9 @@ In this project we have implemented the terrafrom code foe the serverless web ap
 
 
 #### Architecture
-https://d1.awsstatic.com/Test%20Images/Kate%20Test%20Images/Serverless_Web_App_LP_assets-04.094e0479bc43ee7ecbbd1f7cc37ab90b83fe5e73.png
+
+![Architecture]
+(https://d1.awsstatic.com/Test%20Images/Kate%20Test%20Images/Serverless_Web_App_LP_assets-04.094e0479bc43ee7ecbbd1f7cc37ab90b83fe5e73.png)
 
 
 #### How do I deploy this environment?
