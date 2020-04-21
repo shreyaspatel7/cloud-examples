@@ -1,5 +1,4 @@
 
 terraform/serverless/wildrydes/.terraform
 terraform/serverless/wildrydes/*.plan
-terraform/serverless/wildrydes/app/*/*/website/js/config.js
-terraform/serverless/wildrydes/app/uat/xyz/website/js/config.js
+**/website/js/config.js
