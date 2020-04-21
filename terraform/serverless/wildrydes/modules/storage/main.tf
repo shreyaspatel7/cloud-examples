@@ -1,5 +1,25 @@
 
+data "aws_region" "current" {}
+
+resource "local_file" "generate_config_file" {
+    content  = <<-EOF
+    window._config = {
+        cognito: {
+            userPoolId: '${var.pool_id}', // e.g. us-east-2_uXboG5pAb
+            userPoolClientId: '${var.pool_client_id}', // e.g. 25ddkmj4v6hfsfvruhpfi7n4hv
+            region: '${data.aws_region.current.name}' // e.g. us-east-2
+        },
+        api: {
+            invokeUrl: '${var.invoke_url}' // e.g. https://rc7nyt4tql.execute-api.us-west-2.amazonaws.com/prod,
+        }
+    };
+    EOF
+    filename = "${path.module}/../../app/${var.env}/${var.partner}/website/js/config.js"
+  }
 resource "aws_s3_bucket" "public_bucket" {
+  depends_on = [
+    local_file.generate_config_file,
+  ]
   bucket = "${var.env}-${var.partner}-${var.app}"
   acl    = "public-read"
 

@@ -1,3 +1,4 @@
+//This is a simple terrafrom reasouce that will create dynamodb table called Rides with pirtation/Primary key named RideId
 resource "aws_dynamodb_table" "basic_dynamodb_table" {
   name           = "Rides"
   billing_mode   = "PROVISIONED"

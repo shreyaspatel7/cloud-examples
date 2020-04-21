@@ -10,6 +10,14 @@ variable "partner" {
 }
 
 variable "app" {
+  type = string
+}
+
+
+variable "region" {
   type    = string
+  default = "us-east-1"
+  description="this variable will be used to perform multi regation deployment"
+
 }
 

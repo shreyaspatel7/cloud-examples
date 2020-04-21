@@ -23,4 +23,6 @@ variable "pool_client_id" {
   type    = string
 }
 
-
+variable "invoke_url" {
+  type = string
+}
