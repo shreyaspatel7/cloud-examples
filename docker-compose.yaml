@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  devops:
+    build:
+      context: .
+    command: /bin/bash -i
+    container_name: devops-console
+    image: devops:latest
+    stdin_open: true
+    tty: true
+    volumes:
+      - type: bind
+        source: ./
+        target: /cloud-examples
+
