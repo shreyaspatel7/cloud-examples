@@ -1,4 +1,4 @@
 # Examples
 
 
-[AWS Serverless Architecture](terraform/serverless/wildride/README.md)[WIP]
+[AWS Serverless Architecture](terraform/serverless/wildride/README.md)
