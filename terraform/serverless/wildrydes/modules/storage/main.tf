@@ -1,8 +1,21 @@
 
 data "aws_region" "current" {}
 
+/* 
+===================================+ THIS IS THE MOST IMPORTANT STEP +===================================
+After all the resources have been provisioned, we would require some configuration 
+to enable  communication between frontend application, API Gateway, and Cognito. We will aquire the metadat
+related to the provisioned resources using Terrafrom output variable functionality.
+  "Output values are like the return values of a Terraform module, and have several uses:
+  1.  A child module can use outputs to expose a subset of its resource attributes to a parent module.
+  2.  A root module can use outputs to print certain values in the CLI output after running terraform apply.
+  3.  When using remote state, root module outputs can be accessed by other configurations via a terraform_remote_state data source."- https://www.terraform.io/docs/configuration/outputs.html
+
+
+In this config we will add userPoolId, and userPoolId which will take care of the communication between Cognito and the front end application. We also use invoke_url which is the endpoint for the API getway communication. After configuring these varaibles, we will upload the static website related resources to the bucket.
+*/
 resource "local_file" "generate_config_file" {
-    content  = <<-EOF
+  content  = <<-EOF
     window._config = {
         cognito: {
             userPoolId: '${var.pool_id}', // e.g. us-east-2_uXboG5pAb
@@ -14,8 +27,8 @@ resource "local_file" "generate_config_file" {
         }
     };
     EOF
-    filename = "${path.module}/../../app/${var.env}/${var.partner}/website/js/config.js"
-  }
+  filename = "${path.module}/../../app/${var.env}/${var.partner}/website/js/config.js"
+}
 resource "aws_s3_bucket" "public_bucket" {
   depends_on = [
     local_file.generate_config_file,
