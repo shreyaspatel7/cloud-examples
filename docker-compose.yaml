@@ -12,4 +12,7 @@ services:
       - type: bind
         source: ./
         target: /cloud-examples
+      - type: bind
+        source: $HOME/.aws/credentials
+        target: /root/.aws/credentials
 
