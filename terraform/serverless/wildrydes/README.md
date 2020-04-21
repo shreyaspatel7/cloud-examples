@@ -1,4 +1,4 @@
-## AWS Serverlelss IaC
+## AWS Serverless IaC
 
 ### Introduction
 
